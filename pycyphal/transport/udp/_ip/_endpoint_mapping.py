@@ -22,9 +22,9 @@ FIXED_MASK_PREFIX = 0b_11111111_11111111_00000000_00000000
 Masks the 16 most significant bits of the multicast group address. To check whether the address is Cyphal/UDP.
 """
 
-SUBJECT_ID_MASK = 2**15 - 1
+SUBJECT_ID_MASK = 0b_00000000_00000000_00011111_11111111
 """
-Masks the 14 least significant bits of the multicast group address (v4/v6) that represent the subject-ID. (Message)
+Masks the 13 least significant bits of the multicast group address (v4/v6) that represent the subject-ID. (Message)
 """
 
 DESTINATION_NODE_ID_MASK = 0xFFFF
@@ -38,7 +38,7 @@ SNM_BIT_MASK = 0b_00000000_00000001_00000000_00000000
 Service, Not Message: Masks the bit that determines whether the address represents a Message (=0) or Service (=1)
 """
 
-CYPHAL_UDP_IPV4_ADDRESS_VERSION = 0b_00000000_00100000_00000000_00000000
+CYPHAL_UDP_IPV4_ADDRESS_VERSION = 0b_00000000_01000000_00000000_00000000
 """
 Cyphal/UDP uses this bit to isolate IP header version 0 traffic
 (note that the IP header version is not, necessarily, the same as the Cyphal Header version)
